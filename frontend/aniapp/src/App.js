@@ -8,8 +8,7 @@ function App() {
       <header className="App-header">
         <TemporaryDrawer />
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         
+        <p>         
           Edit <code>src/App.js</code> ESCUCHO A UNA SEÑORA QUE DICE A.
         </p>
         <a

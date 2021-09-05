@@ -11,9 +11,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 
+import './home.css'
+
 const useStyles = makeStyles({
   list: {
-    width: 250,
+    width: 500,
   },
   fullList: {
     width: 'auto',
@@ -72,7 +74,14 @@ export default function TemporaryDrawer() {
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
           <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+            <h1 className="TituloSignUp">SIGN IN</h1>
             {list(anchor)}
+
+            <form class='FormularioEpico'>
+              <label font_size='20'>
+                <input type='text' class='Input' placeholder='Username'></input>
+              </label>
+            </form>
           </Drawer>
         </React.Fragment>
       ))}
