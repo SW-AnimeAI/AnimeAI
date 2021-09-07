@@ -4,23 +4,24 @@
 .MuiDrawer-paper
 .MuiDrawer-paperAnchorBottom
 .MuiPaper-elevation16*/
-.MuiPaper-root.MuiDrawer-paper{
+.MuiPaper-root.MuiDrawer-paper.MuiDrawer-paperAnchorRight{
     margin-top:100px;
     background-color: #3c3abb;
     color: #ffffff;
+    width: 460px;
 }
 
-.TituloSignUp {
+.TituloLogIn {
     margin-top: 100px;
     color: #61dafb;
     text-align: center;
 }
 
-.FormularioEpico{   
+.FormularioLogIn{   
     align-self: center;
 }
 
-.Input{   
+.Input{ 
     background-color: #8087CB;
     border: 0;
     color:#ffffff
@@ -28,4 +29,9 @@
 
 .Input::placeholder{    
     color: #ffffff;
+}
+
+.UploadButton{
+    align-self: center;
+    margin-top: 50px;
 }

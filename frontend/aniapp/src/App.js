@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import TemporaryDrawer from './views/home/home.js'
+import LogInDrawer from './views/home/LogIn.js'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <TemporaryDrawer />
+        <LogInDrawer />
         <img src={logo} className="App-logo" alt="logo" />
         <p>         
           Edit <code>src/App.js</code> ESCUCHO A UNA SEÑORA QUE DICE A.
