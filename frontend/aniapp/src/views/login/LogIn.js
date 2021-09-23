@@ -12,10 +12,11 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 
 import './LogIn.css'
+import FormLog from './FormLog.js'
 
 export default function LogInDrawer() {
+  
   const [state, setState] = React.useState(false);
-  const anchor = 'right';
 
   const toggleDrawer = (open) => () => {  
     setState(open);
@@ -23,24 +24,20 @@ export default function LogInDrawer() {
   
   return (
     <div>     
-      <Button onClick={toggleDrawer(true)}>{anchor}</Button>
-      <Drawer anchor={anchor} open={state} onClose={toggleDrawer(false)}>
-        <h1 className="TituloLogIn">LOG IN</h1>
-        <form class='FormularioLogIn'>
-          <label for='username'>
-            <input size='30' type='text' class='Input' id='username' placeholder='Username'></input>
-          </label><br />
-          <label for='password'>
-            <input size='30' type='text' class='Input' id='password' placeholder='Password' minLength='8'></input>
-          </label><br /><br />
-          <button type='submit'>
-            <Button variant='contained' size='large' color='secondary'>LOG IN</Button>
-          </button>
-        </form>
-        <div className='UploadButton'>
-          <Button variant='contained' size='large' color='secondary'>LOG IN</Button>
-        </div>
-      </Drawer>      
+      <Button onClick={toggleDrawer(true)}>Log in</Button>      
+      <Drawer anchor={'right'} open={state} onClose={toggleDrawer(false)}>
+        <FormLog />
+        <h6 align="center">
+                Don't have an account yet? &nbsp;
+                <a 
+                className='Redir-msg'
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                target="_blank"
+                rel="noopener noreferrer">
+                    Sign up
+                </a>
+        </h6>
+      </Drawer>
     </div>
   );
 }
